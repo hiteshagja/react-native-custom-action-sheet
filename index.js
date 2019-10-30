@@ -10,6 +10,7 @@ const ActionModal = ({
   children,
   onCancel,
   cancelButton,
+  buttonColor,
 }) => (
   <Modal
     animationType="fade"
@@ -22,7 +23,11 @@ const ActionModal = ({
         onPress={onCancel}></TouchableOpacity>
       {children}
       {cancelButton && (
-        <Button onPress={onCancel} text={buttonText || 'Cancel'} />
+        <Button
+          onPress={onCancel}
+          color={buttonColor}
+          text={buttonText || 'Cancel'}
+        />
       )}
     </View>
   </Modal>
